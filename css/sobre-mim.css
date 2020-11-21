@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: montserrat;
+}
+body{
+    background: url('../images/mountains-55067.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+}
+.perfil img{
+    border: 5px solid #ecf0f1;
+    border-radius: 50%;
+    width: 20%;
+}
+#title{
+    font: 100 30px Roboto;
+    line-height: 70px;
+    color: #2c3e50;
+}
+.perfil p{
+    font: 400 20px Roboto;
+    color: #ecf0f1;
+}
+.container-sobre{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    height: 130vh;
+}
+.sobre-info{
+    display: flex;
+    width: 90%;
+    height: 60%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sobre-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 95%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#item1{
+    background: #ecf0f1;
+}
+#item2{
+    background: #34495e;
+}
+.item-ajustado{
+    width: 50%;
+}
+.detalhes-sobre{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+}
+.sobre-item:hover{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.43);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.43);
+}
