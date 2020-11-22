@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="login">
+            <div class="item item-logo">
+                <img src="images/girlTrain.png" id="logo">
+            </div>
+            <div class="item item-login">
+                <form id="autenticar_usuario" method="post" onsubmit="return autenticar()">
+                    <input type="text" placeholder="Email" name="email">
+                    <input type="password" placeholder="Senha" name="senha">
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <a href="register.html" id="register">Registrar-se</a>
+                <p id="mesagemErro">Login e/ou senha inválido(s)</p>
+                <img src="images/aguarde-orange.gif" id="aguardeLogin">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/autenticarUsuario.js"></script>
+    
+</body>
+</html>

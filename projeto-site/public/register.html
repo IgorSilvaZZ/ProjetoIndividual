@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="register">
+            <div class="information">
+                <div class="information-item">
+                    <h1>Inscreva-se no Site</h1>
+                    <p>Increva-se para ficar por dentro de tudo que acontece no mundo de Garota no Trem. Conheça mais sobre o livro, autora, personagens e muito mais, não perca nenhuma novidade sobre o que acontece nesse imensa e imersiva historia. Se increva e conheça muito mmais.</p>
+                </div>
+            </div>
+            <div class="register-datas">
+                <h1>Register Form</h1>
+                <div class="register-form">
+                    <form id="formularioCadastrar" method="POST" onsubmit="return cadastrar()">
+                        <input type="text" class="top" placeholder="Nome Completo" name="nome">
+                        <input type="text" class="top" placeholder="Username" name="username">
+                        <input type="text" class="middle" placeholder="Seu Email" name="email">
+                        <input type="password" class="top" placeholder="Senha" name="senha">
+                        <input type="password" class="top" placeholder="Confirme a Senha">
+                </div>
+                    <button type="submit" id="btnEntrar" class="btn">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/cadastrarUsuario.js"></script>
+    
+</body>
+</html>
