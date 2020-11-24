@@ -10,8 +10,8 @@ router.post('/autenticar', function(req, res, next) {
 	console.log('Recuperando usuário por login e senha');
 
 	var email = req.body.email; // depois de .body, use o nome (name) do campo em seu formulário de login
-	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
-	
+	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login		
+
 	let instrucaoSql = `select * from usuario where emailUsuario='${email}' and senhaUsuario='${senha}'`;
 	console.log(instrucaoSql);
 
@@ -37,20 +37,30 @@ router.post('/autenticar', function(req, res, next) {
 
 /* Cadastrar usuário */
 router.post('/cadastrar', function(req, res, next) {
-	console.log('Criando um usuário');
-	
-	Usuario.create({
-		nome : req.body.nome,
-		username : req.body.username,
-		email: req.body.email,
-		senha: req.body.senha
+
+	let intrucaoVerificar = `select * from usuario where emailUsuario='${req.body.email}'`;
+
+	sequelize.query(intrucaoVerificar, {
+		model: Usuario
 	}).then(resultado => {
-		console.log(`Registro criado: ${resultado}`)
-        res.send(resultado);
-    }).catch(erro => {
-		console.error(erro);
-		res.status(500).send(erro.message);
-  	});
+		console.log(`Foram encontrados :${resultado.length}`);
+		if(resultado.length == 1){
+			res.status(400).send('Email já cadastrado');
+		}else{
+			Usuario.create({
+				nome : req.body.nome,
+				username : req.body.username,
+				email: req.body.email,
+				senha: req.body.senha
+			}).then(resultado => {
+				console.log(`Registro criado: ${resultado}`)
+						res.send(resultado);
+				}).catch(erro => {
+					console.error(erro);
+					res.status(500).send(erro.message);
+				})
+		}
+	})
 });
 
 

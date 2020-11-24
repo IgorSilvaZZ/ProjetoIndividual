@@ -97,3 +97,14 @@ body{
     border: none;
     cursor: pointer;
 }
+#mesagemErro{
+    margin-top: 10px;
+    color: red;
+    font-weight: 800;
+    display: none;
+}
+#aguardeCadastro{
+    margin-top: 10px;
+    width: 10%;
+    display: none;
+}

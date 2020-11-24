@@ -22,14 +22,16 @@
                 <h1>Register Form</h1>
                 <div class="register-form">
                     <form id="formularioCadastrar" method="POST" onsubmit="return cadastrar()">
-                        <input type="text" class="top" placeholder="Nome Completo" name="nome">
-                        <input type="text" class="top" placeholder="Username" name="username">
-                        <input type="text" class="middle" placeholder="Seu Email" name="email">
-                        <input type="password" class="top" placeholder="Senha" name="senha">
-                        <input type="password" class="top" placeholder="Confirme a Senha">
+                        <input type="text" class="top" id="nomeCompleto" placeholder="Nome Completo" name="nome">
+                        <input type="text" class="top"  id="userName" placeholder="Username" name="username">
+                        <input type="text" class="middle" id="emailUser" placeholder="Seu Email" name="email">
+                        <input type="password" class="top" id="senhaUser" placeholder="Senha" name="senha">
+                        <input type="password" class="top" id="senhaConfirma" placeholder="Confirme a Senha">
                 </div>
                     <button type="submit" id="btnEntrar" class="btn">Cadastrar</button>
                 </form>
+                <p id="mesagemErro">Email Já Cadastrado</p>
+                <img src="images/aguarde-orange.gif" id="aguardeCadastro">
             </div>
         </div>
     </div>

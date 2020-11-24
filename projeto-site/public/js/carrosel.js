@@ -10,10 +10,18 @@ const manipulateSlide = correctSlideIndex => {
     slides[correctSlideIndex].classList.add('item-visivel');
 }
 
-nextButton.addEventListener('click', () =>{
+const nextSlide = () =>{
     let correctSlideIndex = currentSlideIndex == lastSlideIndex ? currentSlideIndex = 0 : ++currentSlideIndex;
 
     manipulateSlide(correctSlideIndex);
+}
+
+nextButton.addEventListener('click', () =>{
+   /*  let correctSlideIndex = currentSlideIndex == lastSlideIndex ? currentSlideIndex = 0 : ++currentSlideIndex;
+
+    manipulateSlide(correctSlideIndex); */
+
+    nextSlide();
 
 });
 
@@ -21,5 +29,14 @@ prevButton.addEventListener('click', () => {
     let correctSlideIndex = currentSlideIndex == 0 ? currentSlideIndex = lastSlideIndex : --currentSlideIndex;
 
     manipulateSlide(correctSlideIndex);
+    
 
 });
+
+const loopSlide = () =>{
+    setInterval(() =>{
+        nextSlide();
+    }, 2000)
+}
+
+window.addEventListener("load", loopSlide);
