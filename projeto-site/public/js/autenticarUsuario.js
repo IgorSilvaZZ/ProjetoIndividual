@@ -4,6 +4,8 @@ function autenticar(){
 
     imagemAguarde.style.visibility = 'visible';
 
+    var formLogin = document.forms.form_usuario;
+
     var formularioAutenticacao = document.getElementById("autenticar_usuario");
 
     var dataFormulario =  new URLSearchParams(new FormData(formularioAutenticacao));
@@ -12,6 +14,8 @@ function autenticar(){
         method: "POST",
         body: dataFormulario
     }).then(resposta =>{
+
+        console.log(formLogin.elements.email.value);
 
         if(resposta.ok){
             resposta.json().then(json =>{
@@ -39,4 +43,9 @@ function autenticar(){
     });
 
     return false;
+}
+
+function verificarFormulario(){
+    var formLogin = document.forms.form_usuario;
+    console.log(formLogin.elements.email.value);
 }

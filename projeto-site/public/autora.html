@@ -18,11 +18,12 @@
                 <h1>Garota no Trem</h1>
             </div>
             <div class="menu">
-                <a>Ola Igor</a>
-                <a>Personagens</a>
-                <a href="">Livro</a>
+                <a id="nomeUser"></a>
+                <a href="home.html">Personagens</a>
+                <a href="home.html">Livro</a>
                 <a href="autora.html">Autora</a>
                 <a href="sobre-mim.html">Sobre mim</a>
+                <a onclick="logOff()" style="cursor: pointer;">Sair</a>
             </div>
         </div>
         <div class="info">
@@ -142,6 +143,7 @@
 
 
     <script src="js/carrosel.js"></script>
+    <script src="js/vericacoesAuth.js"></script>
     <script>
     
         document.getElementById("backHome").addEventListener('click', () =>{

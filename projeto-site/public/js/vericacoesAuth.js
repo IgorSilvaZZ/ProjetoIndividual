@@ -18,6 +18,7 @@ function verificarSessao(){
     if(emailUsuario == undefined){
         redirecionarLogin();
     }else{
+        validarSessao();
         document.getElementById("nomeUser").innerHTML = `Olá ${nomeUsuario}`;
     }
 
